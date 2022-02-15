@@ -7,8 +7,15 @@
         <v-list-item-group v-model="selectedItem">
             <v-list-item v-for="(item, i) in items" :key="i" active-class="border" :ripple="false">
                 <v-list-item-content>
-                    <v-icon v-text="item.icon"></v-icon>
-                    <v-list-item-subtitle align="center" v-text="item.text" class="mt-3 caption"></v-list-item-subtitle>
+                    <v-tooltip right>
+                        <template v-slot:activator="{ on }">
+                            <div class="text-center align-center justify-space-around" v-on="on">
+                                <v-icon v-text="item.icon"></v-icon>
+                                <v-list-item-subtitle align="center" v-text="item.text" class="mt-3 caption"></v-list-item-subtitle>
+                            </div>
+                        </template>
+                        <span>{{item.text}}</span>
+                    </v-tooltip>
                 </v-list-item-content>
             </v-list-item>
         </v-list-item-group>
@@ -54,5 +61,16 @@ export default {
     .theme--light.v-list-item--active .v-list-item__subtitle, .theme--light.v-list-item .v-list-item__action-text
     {
         color: white !important;
+    }
+
+    .v-tooltip__content {
+        font-size: 20px !important;
+        margin: 20px !important;
+        padding: 20px !important;
+        align-content: center !important;
+        position: absolute !important;
+        opacity: 1 !important;
+        color: white !important;
+        background-color: #704232 !important;
     }
 </style>
