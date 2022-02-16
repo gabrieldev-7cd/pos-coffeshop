@@ -76,7 +76,7 @@
       <strong>Total</strong><v-spacer></v-spacer><strong>$20.14</strong>
     </v-toolbar>
     <strong class="ml-5">Payment Method</strong>
-    <v-item-group mandatory class="mt-n1">
+    <v-item-group mandatory class="mt-1">
       <v-container>
         <v-row justify="center">
           <v-col cols="12" md="4">
@@ -136,6 +136,9 @@
         </v-row>
       </v-container>
     </v-item-group>
+    <div class="mx-3 nt-2 mt-2 mb-2">
+      <v-btn color="#704232" block dark class="widthoutuppercase">Print Bill</v-btn>
+    </div>
   </v-navigation-drawer>
 </template>
 
