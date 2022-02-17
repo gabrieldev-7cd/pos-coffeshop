@@ -148,7 +148,7 @@
   }
 </script>
 
-<style scoped>
+<style>
   .v-card.borderme
   {
     border: 2px solid #704232 !important;
