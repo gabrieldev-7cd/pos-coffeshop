@@ -163,12 +163,4 @@
   {
     text-transform: none !important;
   }
-
-  /*
-  .v-list-item::-webkit-scrollbar
-  {
-    width:2px;
-    background: red;                         
-  }
-  */
 </style>
