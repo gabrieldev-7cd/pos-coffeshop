@@ -36,8 +36,16 @@
       </v-toolbar>
 
       <v-row>
+        
 
         <v-col cols="12" sm="6">
+          <SalesItem
+            title="Caramel Frappuccino"
+            text="Caramel sytrup with coffe, milk and whipped cream."
+            img="2.png"
+            value=3.95
+          />
+
           <v-card flat class="rounded-lg mx-5">
             <v-list-item three-line>
               <v-list-item-avatar rounded size="120" color="grey lighten-4">
@@ -55,7 +63,7 @@
                 </strong>
               </v-list-item-content>
             </v-list-item>
-            
+
           <v-card-actions>
             <v-row>
               <v-col cols="12" sm="6" class="mt-1">
@@ -551,6 +559,8 @@
   import SideBar from '../components/SideBar'
   import SideBarRight from '../components/SideBarRight'
   import CategoryItem from '@/components/CategoryItem'
+  import SalesItem from '@/components/SalesItem'
+
   import BillButton from '@/components/BillingButton'
 
   export default 
@@ -562,7 +572,8 @@
       SideBar,
       SideBarRight,
       CategoryItem,
-      BillButton
+      BillButton,
+      SalesItem
     },
 
     data: () => 

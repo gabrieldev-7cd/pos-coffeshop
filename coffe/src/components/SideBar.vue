@@ -77,7 +77,7 @@ export default {
     .button-logout
     {
         position: relative;
-        top: 20%;
+        top: 10vw;
         margin: auto;
         text-align: center;
     }
