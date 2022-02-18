@@ -79,72 +79,46 @@
     <v-item-group mandatory class="mt-1">
       <v-container>
         <v-row justify="center">
-          <v-col cols="12" md="4">
-            <v-item v-slot="{active, toggle}">
-              <v-card color="#F6EFEF" :class="active ? 'borderme' : ''" class="d-flex align-center rounded-lg" dark height="70" @click="toggle" flat>
-                <v-row>
-                  <v-col cols="12" md="12">
-                    <v-list-item three-line class="text-center mt-1">
-                      <v-list-item-content>
-                        <div>
-                          <v-icon :color="active ? '#704232' : 'black' ">fas fa-money-bill-wave</v-icon>
-                        </div>
-                        <v-list-item-subtitle :class="active ? 'brown--text' : 'black--text'" class="mt-n2 caption">Cash</v-list-item-subtitle>
-                      </v-list-item-content>
-                    </v-list-item>
-                  </v-col>
-                </v-row>
-              </v-card>
-            </v-item>
-          </v-col>
-          <v-col cols="12" md="4">
-            <v-item v-slot="{active, toggle}">
-              <v-card color="#F6EFEF" :class="active ? 'borderme' : ''" class="d-flex align-center rounded-lg" dark height="70" @click="toggle" flat>
-                <v-row>
-                  <v-col cols="12" md="12">
-                    <v-list-item three-line class="text-center mt-1">
-                      <v-list-item-content>
-                        <div>
-                          <v-icon :color="active ? '#704232' : 'black' ">fas fa-credit-card</v-icon>
-                        </div>
-                        <v-list-item-subtitle :class="active ? 'brown--text' : 'black--text'" class="mt-n2 caption">Debit Card</v-list-item-subtitle>
-                      </v-list-item-content>
-                    </v-list-item>
-                  </v-col>
-                </v-row>
-              </v-card>
-            </v-item>
-          </v-col>
-          <v-col cols="12" md="4">
-            <v-item v-slot="{active, toggle}">
-              <v-card color="#F6EFEF" :class="active ? 'borderme' : '' " class="d-flex align-center rounded-lg" dark height="70" @click="toggle" flat>
-                <v-row>
-                  <v-col cols="12" md="12">
-                    <v-list-item three-line class="text-center mt-1">
-                      <v-list-item-content>
-                        <div>
-                          <v-icon :color="active ? '#704232' : 'black' ">fas fa-qrcode</v-icon>
-                        </div>
-                        <v-list-item-subtitle :class="active ? 'brown--text' : 'black--text'" class="mt-n2 caption">E-Wallet</v-list-item-subtitle>
-                      </v-list-item-content>
-                    </v-list-item>
-                  </v-col>
-                </v-row>
-              </v-card>
-            </v-item>
-          </v-col>
+          
+          <v-col cols="12" md="4" v-for="(item, i) in options" :key="i">
+            <PayOption 
+              :title="item.title"
+              :icon="item.icon"
+              :iconColor="item.iconColor"
+              :colorActive="item.colorActive"
+              :colorCard="item.colorCard"
+            />
+          </v-col>  
+
         </v-row>
       </v-container>
     </v-item-group>
     <div class="mx-3 nt-2 mt-2 mb-2">
-      <v-btn color="#704232" block dark class="widthoutuppercase">Print Bill</v-btn>
+      <BillButton color="#704232" title="Print Bill"/>
     </div>
   </v-navigation-drawer>
 </template>
 
 <script>
+  import BillButton from '@/components/BillingButton'
+  import PayOption from  '@/components/PayOption'
   export default {
-
+    name: 'SideBarRight',
+     components: 
+    {
+      BillButton,
+      PayOption
+    },
+    data: () => {
+      return {
+        options:
+        [
+          {title: 'Cash', icon: 'fas fa-money-bill-wave', iconColor: '#704232', colorActive: 'brown--text', colorCard: '#F6EFEF'},
+          {title: 'Debit Card', icon: 'fas fa-credit-card', iconColor: '#704232', colorActive: 'brown--text', colorCard:'#F6EFEF'},
+          {title: 'E-Wallet', icon: 'fas fa-qrcode', iconColor: '#704232', colorActive: 'brown--text', colorCard:'#F6EFEF'}
+        ]
+      }
+    }
   }
 </script>
 
@@ -157,10 +131,5 @@
   .col-12
   {
     padding: 5px !important;
-  }
-
-  .v-btn.widthoutuppercase
-  {
-    text-transform: none !important;
   }
 </style>

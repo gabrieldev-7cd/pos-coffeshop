@@ -279,7 +279,7 @@
               </v-row>
             </v-card-actions>
             <v-card-actions>
-              <v-btn color="#704232" block dark class="widthoutuppercase mb-2">Add Billing</v-btn>
+              <BillButton color="#704232" title="Add Billing"/>
             </v-card-actions>
           </v-card>
         </v-col>
@@ -529,7 +529,7 @@
               </v-row>
             </v-card-actions>
             <v-card-actions>
-              <v-btn color="#704232" block dark class="widthoutuppercase mb-2">Add Billing</v-btn>
+              <BillButton color="#704232" title="Add Billing"/>
             </v-card-actions>
           </v-card>
         </v-col>
@@ -542,6 +542,7 @@
   import SideBar from '../components/SideBar'
   import SideBarRight from '../components/SideBarRight'
   import CategoryItem from '@/components/CategoryItem'
+  import BillButton from '@/components/BillingButton'
 
   export default 
   {
@@ -551,7 +552,8 @@
     {
       SideBar,
       SideBarRight,
-      CategoryItem
+      CategoryItem,
+      BillButton
     },
 
     data: () => 
