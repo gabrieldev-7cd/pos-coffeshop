@@ -3,7 +3,7 @@
     <v-list subheader two-line class="mt-1">
       <v-list-item>
         <v-list-item-avatar rounded>
-          <v-img src="https://cdn.vuetifyjs.com/images/lists/2.jpg" />
+          <v-img src="https://cdn.vuetifyjs.com/images/lists/2.jpg"/>
         </v-list-item-avatar>
         <v-list-item-content>
           <v-list-item-subtitle>I'm a Cashier</v-list-item-subtitle>
@@ -17,53 +17,13 @@
       </v-list-item>
     </v-list>
     <strong class="ml-3">Bills</strong>
-    <v-list suheader two-line class="mt-1">
-      <v-list-item>
-        <v-list-item-avatar rounded color="grey lighten-4">
-          <v-img src="2.png"/>
-        </v-list-item-avatar>
-        <v-list-item-content>
-          <v-list-item-circle class="subtitle-2">Caramel Frappuccino</v-list-item-circle>
-          <v-list-item-subtitle>X1
-            <v-btn plain color="#704232" small>Notes
-              <v-icon right>mdi-pencil</v-icon>
-            </v-btn>
-          </v-list-item-subtitle>
-        </v-list-item-content>
-        <v-list-item-action class="caption">$3.95</v-list-item-action>
-      </v-list-item>
-    </v-list>
-    <v-list suheader two-line class="mt-1">
-      <v-list-item>
-        <v-list-item-avatar rounded color="grey lighten-4">
-          <v-img src="3.png"/>
-        </v-list-item-avatar>
-        <v-list-item-content>
-          <v-list-item-circle class="subtitle-2">Chocolate Frappuccino</v-list-item-circle>
-          <v-list-item-subtitle>X1
-            <v-btn plain color="#704232" small>Notes
-              <v-icon right>mdi-pencil</v-icon>
-            </v-btn>
-          </v-list-item-subtitle>
-        </v-list-item-content>
-        <v-list-item-action class="caption">$9.02</v-list-item-action>
-      </v-list-item>
-    </v-list>
-    <v-list suheader two-line class="mt-1">
-      <v-list-item>
-        <v-list-item-avatar rounded color="grey lighten-4">
-          <v-img src="4.png"/>
-        </v-list-item-avatar>
-        <v-list-item-content>
-          <v-list-item-circle class="subtitle-2">Peppermint Macchiato</v-list-item-circle>
-          <v-list-item-subtitle>X1
-            <v-btn plain color="#704232" small>Notes
-              <v-icon right>mdi-pencil</v-icon>
-            </v-btn>
-          </v-list-item-subtitle>
-        </v-list-item-content>
-        <v-list-item-action class="caption">$5.34</v-list-item-action>
-      </v-list-item>
+    <v-list suheader two-line class="mt-1" v-for="(item, i) in itens" :key="i">
+      <ItemBill 
+        :title="item.title"
+        :img="item.img"
+        :quant="item.quant"
+        :value= item.value
+      />
     </v-list>
     <v-toolbar color="rgba(0,0,0,0)" flat>
       <strong>Subtotal</strong><v-spacer/><strong>$18.31</strong>
@@ -79,72 +39,53 @@
     <v-item-group mandatory class="mt-1">
       <v-container>
         <v-row justify="center">
-          <v-col cols="12" md="4">
-            <v-item v-slot="{active, toggle}">
-              <v-card color="#F6EFEF" :class="active ? 'borderme' : ''" class="d-flex align-center rounded-lg" dark height="70" @click="toggle" flat>
-                <v-row>
-                  <v-col cols="12" md="12">
-                    <v-list-item three-line class="text-center mt-1">
-                      <v-list-item-content>
-                        <div>
-                          <v-icon :color="active ? '#704232' : 'black' ">fas fa-money-bill-wave</v-icon>
-                        </div>
-                        <v-list-item-subtitle :class="active ? 'brown--text' : 'black--text'" class="mt-n2 caption">Cash</v-list-item-subtitle>
-                      </v-list-item-content>
-                    </v-list-item>
-                  </v-col>
-                </v-row>
-              </v-card>
-            </v-item>
-          </v-col>
-          <v-col cols="12" md="4">
-            <v-item v-slot="{active, toggle}">
-              <v-card color="#F6EFEF" :class="active ? 'borderme' : ''" class="d-flex align-center rounded-lg" dark height="70" @click="toggle" flat>
-                <v-row>
-                  <v-col cols="12" md="12">
-                    <v-list-item three-line class="text-center mt-1">
-                      <v-list-item-content>
-                        <div>
-                          <v-icon :color="active ? '#704232' : 'black' ">fas fa-credit-card</v-icon>
-                        </div>
-                        <v-list-item-subtitle :class="active ? 'brown--text' : 'black--text'" class="mt-n2 caption">Debit Card</v-list-item-subtitle>
-                      </v-list-item-content>
-                    </v-list-item>
-                  </v-col>
-                </v-row>
-              </v-card>
-            </v-item>
-          </v-col>
-          <v-col cols="12" md="4">
-            <v-item v-slot="{active, toggle}">
-              <v-card color="#F6EFEF" :class="active ? 'borderme' : '' " class="d-flex align-center rounded-lg" dark height="70" @click="toggle" flat>
-                <v-row>
-                  <v-col cols="12" md="12">
-                    <v-list-item three-line class="text-center mt-1">
-                      <v-list-item-content>
-                        <div>
-                          <v-icon :color="active ? '#704232' : 'black' ">fas fa-qrcode</v-icon>
-                        </div>
-                        <v-list-item-subtitle :class="active ? 'brown--text' : 'black--text'" class="mt-n2 caption">E-Wallet</v-list-item-subtitle>
-                      </v-list-item-content>
-                    </v-list-item>
-                  </v-col>
-                </v-row>
-              </v-card>
-            </v-item>
-          </v-col>
+          <v-col cols="12" md="4" v-for="(item, i) in options" :key="i">
+            <PayOption 
+              :title="item.title"
+              :icon="item.icon"
+              :iconColor="item.iconColor"
+              :colorActive="item.colorActive"
+              :colorCard="item.colorCard"
+            />
+          </v-col>  
         </v-row>
       </v-container>
     </v-item-group>
     <div class="mx-3 nt-2 mt-2 mb-2">
-      <v-btn color="#704232" block dark class="widthoutuppercase">Print Bill</v-btn>
+      <BillButton color="#704232" title="Print Bill"/>
     </div>
   </v-navigation-drawer>
 </template>
 
 <script>
-  export default {
+  import BillButton from '@/components/BillingButton'
+  import PayOption from  '@/components/PayOption'
+  import ItemBill from '@/components/ItemBill'
 
+  export default {
+    name: 'SideBarRight',
+     components: 
+    {
+      BillButton,
+      PayOption,
+      ItemBill
+    },
+    data: () => {
+      return {
+        options:
+        [
+          {title: 'Cash', icon: 'fas fa-money-bill-wave', iconColor: '#704232', colorActive: 'brown--text', colorCard: '#F6EFEF'},
+          {title: 'Debit Card', icon: 'fas fa-credit-card', iconColor: '#704232', colorActive: 'brown--text', colorCard:'#F6EFEF'},
+          {title: 'E-Wallet', icon: 'fas fa-qrcode', iconColor: '#704232', colorActive: 'brown--text', colorCard:'#F6EFEF'}
+        ],
+        itens:
+        [
+          {title: 'Caramel Frappuccino', img: '2.png', quant: 1, value: 3.95},
+          {title: 'Chocolate Frappuccino', img: '3.png', quant: 1, value: 9.02},
+          {title: 'Peppermint Macchiato', img: '4.png', quant: 1, value: 5.34}
+        ]
+      }
+    }
   }
 </script>
 
@@ -157,10 +98,5 @@
   .col-12
   {
     padding: 5px !important;
-  }
-
-  .v-btn.widthoutuppercase
-  {
-    text-transform: none !important;
   }
 </style>
