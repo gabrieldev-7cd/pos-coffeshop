@@ -7,7 +7,7 @@
         <v-list-item-group v-model="selectedItem">
             <v-list-item v-for="(item, i) in items" :key="i" active-class="border" :ripple="false">
                 <v-list-item-content>
-                    <v-tooltip right>
+                    <v-tooltip right class="tooltip align-center">
                         <template v-slot:activator="{ on }">
                             <div class="text-center align-center justify-space-around" v-on="on">
                                 <v-icon v-text="item.icon"></v-icon>
@@ -20,7 +20,7 @@
             </v-list-item>
         </v-list-item-group>
     </v-list>
-    <div style="position: absolute; bottom: 20px; margin-left: auto; margin-right: auto; left:0; right:0; text-align: center;">
+    <div class="button-logout">
         <v-icon>fas fa-sign-out-alt</v-icon><br><span class="caption">Logout</span>
     </div>
   </v-navigation-drawer>
@@ -72,5 +72,13 @@ export default {
         opacity: 1 !important;
         color: white !important;
         background-color: #704232 !important;
+    }
+
+    .button-logout
+    {
+        position: relative;
+        top: 20%;
+        margin: auto;
+        text-align: center;
     }
 </style>

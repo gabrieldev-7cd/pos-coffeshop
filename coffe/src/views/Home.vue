@@ -16,160 +16,14 @@
       <v-item-group mandatory class="mt-n1">
         <v-container>
           <v-row justify="center">
-            <v-col cols="12" md="2">
-              <v-item v-slot="{active, toggle}">
-                <v-card 
-                  :color="active ? '#F6EFEF' : 'white' "
-                  :class="active ? 'borderme' : 'borderout' " 
-                  class="f-flex align-center rounded-lg mx-2" 
-                  dark height="140" @click="toggle" flat
-                >
-                  <v-row>
-                    <v-col cols="12" sm="12">
-                      <v-list-item three-line class="text-center">
-                        <v-list-item-content>
-                          <div align="center" justify="center">
-                            <v-img src="c1.png" max-height="110" max-width="110" contain></v-img>
-                          </div>
-                          <v-list-item-subtitle :class="active ? 'brown--text' : 'black--text' " class="caption mt-4">
-                            All
-                          </v-list-item-subtitle>
-                        </v-list-item-content>
-                      </v-list-item>
-                    </v-col>
-                  </v-row>
-                </v-card>
-              </v-item>
-            </v-col>
-          
-            <v-col cols="12" md="2">
-              <v-item v-slot="{active, toggle}">
-                <v-card 
-                  :color="active ? '#F6EFEF' : 'white' "
-                  :class="active ? 'borderme' : 'borderout' " 
-                  class="f-flex align-center rounded-lg mx-2" 
-                  dark height="140" @click="toggle" flat
-                >
-                  <v-row>
-                    <v-col cols="12" sm="12">
-                      <v-list-item three-line class="text-center">
-                        <v-list-item-content>
-                          <div align="center" justify="center">
-                            <v-img src="c2.png" max-height="90" max-width="90" contain></v-img>
-                          </div>
-                          <v-list-item-subtitle :class="active ? 'brown--text' : 'black--text' " class="caption mt-6">
-                            Coffee
-                          </v-list-item-subtitle>
-                        </v-list-item-content>
-                      </v-list-item>
-                    </v-col>
-                  </v-row>
-                </v-card>
-              </v-item>
-            </v-col>
-          
-            <v-col cols="12" md="2">
-              <v-item v-slot="{active, toggle}">
-                <v-card 
-                  :color="active ? '#F6EFEF' : 'white' "
-                  :class="active ? 'borderme' : 'borderout' " 
-                  class="f-flex align-center rounded-lg mx-2" 
-                  dark height="140" @click="toggle" flat
-                >
-                  <v-row>
-                    <v-col cols="12" sm="12">
-                      <v-list-item three-line class="text-center">
-                        <v-list-item-content>
-                          <div align="center" justify="center">
-                            <v-img src="c3.png" max-height="80" max-width="80" contain></v-img>
-                          </div>
-                          <v-list-item-subtitle :class="active ? 'brown--text' : 'black--text' " class="caption mt-4">
-                            Juice
-                          </v-list-item-subtitle>
-                        </v-list-item-content>
-                      </v-list-item>
-                    </v-col>
-                  </v-row>
-                </v-card>
-              </v-item>
-            </v-col>
-            
-            <v-col cols="12" md="2">
-              <v-item v-slot="{active, toggle}">
-                <v-card 
-                  :color="active ? '#F6EFEF' : 'white' "
-                  :class="active ? 'borderme' : 'borderout' " 
-                  class="f-flex align-center rounded-lg mx-2" 
-                  dark height="140" @click="toggle" flat
-                >
-                  <v-row>
-                    <v-col cols="12" sm="12">
-                      <v-list-item three-line class="text-center">
-                        <v-list-item-content>
-                          <div align="center" justify="center">
-                            <v-img src="c4.png" max-height="80" max-width="80" contain></v-img>
-                          </div>
-                          <v-list-item-subtitle :class="active ? 'brown--text' : 'black--text' " class="caption mt-4">
-                            Millk Based
-                          </v-list-item-subtitle>
-                        </v-list-item-content>
-                      </v-list-item>
-                    </v-col>
-                  </v-row>
-                </v-card>
-              </v-item>
-            </v-col>
-
-            <v-col cols="12" md="2">
-              <v-item v-slot="{active, toggle}">
-                <v-card 
-                  :color="active ? '#F6EFEF' : 'white' "
-                  :class="active ? 'borderme' : 'borderout' " 
-                  class="f-flex align-center rounded-lg mx-2" 
-                  dark height="140" @click="toggle" flat
-                >
-                  <v-row>
-                    <v-col cols="12" sm="12">
-                      <v-list-item three-line class="text-center">
-                        <v-list-item-content>
-                          <div align="center" justify="center">
-                            <v-img src="c5.png" max-height="80" max-width="80" contain></v-img>
-                          </div>
-                          <v-list-item-subtitle :class="active ? 'brown--text' : 'black--text' " class="caption mt-10">
-                            Snack's
-                          </v-list-item-subtitle>
-                        </v-list-item-content>
-                      </v-list-item>
-                    </v-col>
-                  </v-row>
-                </v-card>
-              </v-item>
-            </v-col>
-
-            <v-col cols="12" md="2">
-              <v-item v-slot="{active, toggle}">
-                <v-card 
-                  :color="active ? '#F6EFEF' : 'white' "
-                  :class="active ? 'borderme' : 'borderout' " 
-                  class="f-flex align-center rounded-lg mx-2" 
-                  dark height="140" @click="toggle" flat
-                >
-                  <v-row>
-                    <v-col cols="12" sm="12">
-                      <v-list-item three-line class="text-center">
-                        <v-list-item-content>
-                          <div align="center" justify="center">
-                            <v-img src="c6.png" max-height="80" max-width="80" contain></v-img>
-                          </div>
-                          <v-list-item-subtitle :class="active ? 'brown--text' : 'black--text' " class="caption mt-10">
-                            Dessert
-                          </v-list-item-subtitle>
-                        </v-list-item-content>
-                      </v-list-item>
-                    </v-col>
-                  </v-row>
-                </v-card>
-              </v-item>
+            <v-col cols="12" md="2" v-for="(cat, i) in Categories" :key="i">
+              <CategoryItem 
+                v-bind:title="cat.title" 
+                v-bind:image="cat.image" 
+                v-bind:width="cat.width" 
+                v-bind:height="cat.height" 
+                v-bind:space="cat.space"
+              />
             </v-col>
           </v-row>
         </v-container>
@@ -687,6 +541,7 @@
 <script>
   import SideBar from '../components/SideBar'
   import SideBarRight from '../components/SideBarRight'
+  import CategoryItem from '@/components/CategoryItem'
 
   export default 
   {
@@ -695,7 +550,23 @@
     components: 
     {
       SideBar,
-      SideBarRight
+      SideBarRight,
+      CategoryItem
+    },
+
+    data: () => 
+    {
+      return{
+        Categories:
+        [
+          {title: 'All', image: 'c1.png', width: '110', height: '110', space: 'mt-7'},
+          {title: 'Coffee', image: 'c2.png', width: '90', height: '90', space: 'mt-6'},
+          {title: 'Juice', image:'c3.png', width: '80', height: '80', space: 'mt-4'},
+          {title: 'Milk Based', image:'c4.png', width: '80', height: '80', space: 'mt-4'},
+          {title: "Snack's", image:'c5.png', width: '80', height: '80', space: 'mt-10'},
+          {title: 'Dessert', image:'c6.png', width: '80', height: '80', space: 'mt-10'}
+        ]
+      }
     }
   }
 </script>
