@@ -1,6 +1,5 @@
 <template>
-    <!-- <v-col cols="12" md="2"> -->
-        <v-item v-slot="{active, toggle}">
+    <v-item v-slot="{active, toggle}">
         <v-card 
             :color="active ? '#F6EFEF' : 'white' "
             :class="active ? 'borderme' : 'borderout' " 
@@ -22,8 +21,7 @@
             </v-col>
             </v-row>
         </v-card>
-        </v-item>
-    <!-- </v-col> -->
+    </v-item>
 </template>
 
 <script>
@@ -31,6 +29,7 @@
 export default (
     {
         name: 'CategoryItem',
+        
         props:
         {
             title: String,

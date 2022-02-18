@@ -3,7 +3,7 @@
     <v-list subheader two-line class="mt-1">
       <v-list-item>
         <v-list-item-avatar rounded>
-          <v-img src="https://cdn.vuetifyjs.com/images/lists/2.jpg" />
+          <v-img src="https://cdn.vuetifyjs.com/images/lists/2.jpg"/>
         </v-list-item-avatar>
         <v-list-item-content>
           <v-list-item-subtitle>I'm a Cashier</v-list-item-subtitle>
@@ -25,7 +25,6 @@
         :value= item.value
       />
     </v-list>
-
     <v-toolbar color="rgba(0,0,0,0)" flat>
       <strong>Subtotal</strong><v-spacer/><strong>$18.31</strong>
     </v-toolbar>
@@ -62,6 +61,7 @@
   import BillButton from '@/components/BillingButton'
   import PayOption from  '@/components/PayOption'
   import ItemBill from '@/components/ItemBill'
+
   export default {
     name: 'SideBarRight',
      components: 
@@ -82,7 +82,7 @@
         [
           {title: 'Caramel Frappuccino', img: '2.png', quant: 1, value: 3.95},
           {title: 'Chocolate Frappuccino', img: '3.png', quant: 1, value: 9.02},
-          {title: 'Peppermint Macchiato', img: '4.png', quant: 1, value: 5.34},
+          {title: 'Peppermint Macchiato', img: '4.png', quant: 1, value: 5.34}
         ]
       }
     }

@@ -10,10 +10,4 @@ export default {
         title: String
     }
 }
-// #704232
 </script>
-
-<style>
-
-</style>
-
